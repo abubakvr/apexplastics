@@ -10,7 +10,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "EcoPellets - Premium Recycled Plastic Pellets",
+  title: "Apex Plastics - Premium Recycled Plastic Pellets",
   description:
     "High-quality recycled plastic pellets for sustainable manufacturing",
 };

@@ -124,7 +124,7 @@ export default function Hero() {
           </motion.div>
 
           <motion.div
-            className="relative"
+            className="relative px-2"
             initial="hidden"
             animate="visible"
             variants={slideInRight}
@@ -145,7 +145,7 @@ export default function Hero() {
             </motion.div>
 
             <motion.div
-              className="absolute -bottom-6 -left-6 bg-white p-4 rounded-lg shadow-lg"
+              className="absolute -bottom-6 -left-1 md:-left-6 bg-white p-4 rounded-lg shadow-lg"
               variants={popUp}
               transition={{
                 duration: 0.5,
@@ -187,7 +187,7 @@ export default function Hero() {
 
       {/* Background decoration */}
       <motion.div
-        className="absolute top-0 right-0 z-5 w-1/3 h-full bg-primary-200 rounded-bl-full opacity-50"
+        className="hidden lg:flex absolute top-0 right-0 z-5 w-1/3 h-full bg-primary-200 rounded-bl-full opacity-50"
         initial={{ opacity: 0, x: 100 }}
         animate={{ opacity: 0.5, x: 0 }}
         transition={{ duration: 1, delay: 0.2 }}
