@@ -34,12 +34,12 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           passphrase: ${{ secrets.SSH_PASSPHRASE }}
           script: |
-            cd /home/workspace/apex-plastics || exit 1
+            cd /home/workspace/apexplastics || exit 1
             git pull
             npm install
             npm run build
-            pm2 delete apex-trader || true
-            pm2 start npm --name apex-plastics -- start --prefix /home/workspace/apex-plastics
+            pm2 delete apex-plastics || true
+            pm2 start npm --name apex-plastics -- start --prefix /home/workspace/apexplastics
             pm2 save
 
       - name: Update deployment status (success)
