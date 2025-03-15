@@ -3,6 +3,8 @@ import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { Metadata } from "next";
+import { CartProvider } from "@/contexts/CartContext";
+import { Toaster } from "react-hot-toast";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -25,9 +27,12 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <body
         className={`${inter.variable} font-sans min-h-screen flex flex-col`}
       >
-        <Header />
-        <main className="flex-grow">{children}</main>
-        <Footer />
+        <CartProvider>
+          <Header />
+          <main className="flex-grow">{children}</main>
+          <Footer />
+          <Toaster position="top-right" />
+        </CartProvider>
       </body>
     </html>
   );
